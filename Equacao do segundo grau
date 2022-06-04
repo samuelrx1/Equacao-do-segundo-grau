@@ -1,0 +1,40 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main (){
+	
+	float a, b, c;
+	float delta, x1, x2;
+	float raiz_quadrada, potencia_b;
+	
+	cout << "Insira o valor do a: ";
+	cin >> a;
+	
+	cout << "Insira o valor do b: ";
+	cin >> b;
+
+	cout << "Insira o valor do c: ";
+	cin >> c;
+	
+	
+	potencia_b = pow(b,2);
+	
+	delta = (potencia_b) - 4 * a * c;
+	cout << "Delta = " << delta;
+	
+	
+	raiz_quadrada = sqrt(delta);
+	
+	if(delta >= 0){
+		x1 = ((-b) + raiz_quadrada) / (2 * a);
+		x2 = ((-b) - raiz_quadrada) / (2 * a);
+		
+		cout << "\nX1 = "  << x1;
+		cout << "\nX2 = "  << x2;
+		
+		
+	}else{
+		cout << "Nao admite solucao real";
+	}
+}
